@@ -44,29 +44,62 @@ void send_ntp_packet(int sockfd, struct sockaddr *pcliaddr,
 
     fprintf(stderr,"*************  INITIAL VALUES BEFORE SEND  *******************\n");
 
-    fprintf(stderr,"li_vn_mode %Xh  size %lu\n",msg->li_vn_mode,sizeof(msg->li_vn_mode) );
-    fprintf(stderr,"stratum %d size %lu\n",msg->stratum,sizeof(msg->stratum));
-    fprintf(stderr,"ppoll %d size %lu\n",msg->ppoll,sizeof(msg->ppoll));
-    fprintf(stderr,"precision %d  size %lu\n",msg->precision,sizeof(msg->precision));
-    fprintf(stderr,"rootdelay %d size %lu\n",msg->rootdelay,sizeof(msg->rootdelay));
-    fprintf(stderr,"rootdispersion %d %lu\n",msg->rootdispersion,sizeof(msg->rootdispersion));
-    fprintf(stderr,"refid %d size %lu\n",msg->refid,sizeof(msg->refid));
+    fprintf(stderr,"li_vn_mode %Xh  size %lu\n",
+            msg->li_vn_mode,
+            sizeof(msg->li_vn_mode) );
+    fprintf(stderr,"stratum %d size %lu\n",
+            msg->stratum,
+            sizeof(msg->stratum));
+    fprintf(stderr,"ppoll %d size %lu\n",
+            msg->ppoll,
+            sizeof(msg->ppoll));
+    fprintf(stderr,"precision %d  size %lu\n",
+            msg->precision,
+            sizeof(msg->precision));
+    fprintf(stderr,"rootdelay %d size %lu\n",
+            msg->rootdelay,
+            sizeof(msg->rootdelay));
+    fprintf(stderr,"rootdispersion %d %lu\n",
+            msg->rootdispersion,
+            sizeof(msg->rootdispersion));
+    fprintf(stderr,"refid %d size %lu\n",
+            msg->refid,sizeof(msg->refid));
 
-    fprintf(stderr,"ref %u  %lu\n",msg->ref.Ul_i.Xl_ui,sizeof(msg->ref.Ul_i));
-    fprintf(stderr,"ref %u  %lu\n",msg->ref.Ul_f.Xl_f,sizeof(msg->ref.Ul_f));
+    fprintf(stderr,"ref %u  %lu\n",
+            msg->ref.Ul_i.Xl_ui,
+            sizeof(msg->ref.Ul_i));
+    fprintf(stderr,"ref %u  %lu\n",
+            msg->ref.Ul_f.Xl_f,
+            sizeof(msg->ref.Ul_f));
 
-    fprintf(stderr,"org %u  %lu\n",msg->ref.Ul_i.Xl_ui,sizeof(msg->ref.Ul_i));
-    fprintf(stderr,"org %u  %lu\n",msg->ref.Ul_f.Xl_f,sizeof(msg->ref.Ul_f));
+    fprintf(stderr,"org %u  %lu\n",
+            msg->ref.Ul_i.Xl_ui,
+            sizeof(msg->ref.Ul_i));
+    fprintf(stderr,"org %u  %lu\n",
+            msg->ref.Ul_f.Xl_f,
+            sizeof(msg->ref.Ul_f));
 
 
-    fprintf(stderr,"org %u  %lu\n",msg->org.Ul_i.Xl_ui,sizeof(msg->org.Ul_i));
-    fprintf(stderr,"org %u  %lu\n",msg->org.Ul_f.Xl_f,sizeof(msg->org.Ul_f));
+    fprintf(stderr,"org %u  %lu\n",
+            msg->org.Ul_i.Xl_ui,
+            sizeof(msg->org.Ul_i));
+    fprintf(stderr,"org %u  %lu\n",
+            msg->org.Ul_f.Xl_f,
+            sizeof(msg->org.Ul_f));
 
-    fprintf(stderr,"rec %u  %lu\n",msg->rec.Ul_i.Xl_ui,sizeof(msg->rec.Ul_i));
-    fprintf(stderr,"rec %u  %lu\n",msg->rec.Ul_f.Xl_f,sizeof(msg->rec.Ul_f));
+    fprintf(stderr,"rec %u  %lu\n",
+            msg->rec.Ul_i.Xl_ui,
+            sizeof(msg->rec.Ul_i));
+    fprintf(stderr,"rec %u  %lu\n",
+            msg->rec.Ul_f.Xl_f,
+            sizeof(msg->rec.Ul_f));
 
-    fprintf(stderr,"xmt %u  %lu\n",msg->xmt.Ul_i.Xl_ui,sizeof(msg->xmt.Ul_i));
-    fprintf(stderr,"xmt %u  %lu\n",msg->xmt.Ul_f.Xl_f,sizeof(msg->xmt.Ul_f));
+    fprintf(stderr,"xmt %u  %lu\n",
+            msg->xmt.Ul_i.Xl_ui,
+            sizeof(msg->xmt.Ul_i));
+    fprintf(stderr,"xmt %u  %lu\n",
+            msg->xmt.Ul_f.Xl_f,
+            sizeof(msg->xmt.Ul_f));
 
     fprintf(stderr,"*************  END INITIAL VALUES BEFORE SEND  ***************\n");
 
@@ -77,13 +110,26 @@ void send_ntp_packet(int sockfd, struct sockaddr *pcliaddr,
 
 
     fprintf(stderr,"\n\n*************   2nd START  *******************\n");
-    fprintf(stderr,"li_vn_mode %Xh  size %lu\n",msg->li_vn_mode,sizeof(msg->li_vn_mode) );
-    fprintf(stderr,"stratum %d size %lu\n",msg->stratum,sizeof(msg->stratum));
-    fprintf(stderr,"ppoll %d size %lu\n",msg->ppoll,sizeof(msg->ppoll));
-    fprintf(stderr,"precision %d  size %lu\n",msg->precision,sizeof(msg->precision));
-    fprintf(stderr,"rootdelay %Xh size %lu\n",ntohl(msg->rootdelay),sizeof(msg->rootdelay));
-    fprintf(stderr,"rootdispersion %d %lu\n",ntohl(msg->rootdispersion),sizeof(msg->rootdispersion));
-    fprintf(stderr,"refid %d size %lu\n",msg->refid,sizeof(msg->refid));
+    fprintf(stderr,"li_vn_mode %Xh  size %lu\n",
+            msg->li_vn_mode,
+            sizeof(msg->li_vn_mode) );
+    fprintf(stderr,"stratum %d size %lu\n",
+            msg->stratum,
+            sizeof(msg->stratum));
+    fprintf(stderr,"ppoll %d size %lu\n",
+            msg->ppoll,
+            sizeof(msg->ppoll));
+    fprintf(stderr,"precision %d  size %lu\n",
+            msg->precision,
+            sizeof(msg->precision));
+    fprintf(stderr,"rootdelay %Xh size %lu\n",
+            ntohl(msg->rootdelay),
+            sizeof(msg->rootdelay));
+    fprintf(stderr,"rootdispersion %d %lu\n",
+            ntohl(msg->rootdispersion),
+            sizeof(msg->rootdispersion));
+    fprintf(stderr,"refid %d size %lu\n",
+            msg->refid,sizeof(msg->refid));
 
     struct pkt *prt = malloc(sizeof(struct pkt));
 
@@ -92,38 +138,58 @@ void send_ntp_packet(int sockfd, struct sockaddr *pcliaddr,
     NTOHL_FP(&msg->rec, &prt->rec);
     NTOHL_FP(&msg->xmt, &prt->xmt);
 
-    fprintf(stderr,"ref %u  %lu\n",prt->ref.Ul_i.Xl_ui,sizeof(msg->ref.Ul_i));
-    fprintf(stderr,"ref %u  %lu\n",prt->ref.Ul_f.Xl_f,sizeof(msg->ref.Ul_f));
+    fprintf(stderr,"ref %u  %lu\n",
+            prt->ref.Ul_i.Xl_ui,
+            sizeof(msg->ref.Ul_i));
+    fprintf(stderr,"ref %u  %lu\n",
+            prt->ref.Ul_f.Xl_f,
+            sizeof(msg->ref.Ul_f));
 
 
-    fprintf(stderr,"org %u  %lu\n",prt->org.Ul_i.Xl_ui,sizeof(prt->org.Ul_i));
-    fprintf(stderr,"org %u  %lu\n",prt->org.Ul_f.Xl_f,sizeof(prt->org.Ul_f));
+    fprintf(stderr,"org %u  %lu\n",
+            prt->org.Ul_i.Xl_ui,
+            sizeof(prt->org.Ul_i));
+    fprintf(stderr,"org %u  %lu\n",
+            prt->org.Ul_f.Xl_f,
+            sizeof(prt->org.Ul_f));
 
-    fprintf(stderr,"rec %u  %lu\n",prt->rec.Ul_i.Xl_ui,sizeof(prt->rec.Ul_i));
-    fprintf(stderr,"rec %u  %lu\n",prt->rec.Ul_f.Xl_f,sizeof(prt->rec.Ul_f));
+    fprintf(stderr,"rec %u  %lu\n",
+            prt->rec.Ul_i.Xl_ui,
+            sizeof(prt->rec.Ul_i));
+    fprintf(stderr,"rec %u  %lu\n",
+            prt->rec.Ul_f.Xl_f,
+            sizeof(prt->rec.Ul_f));
 
-    fprintf(stderr,"xmt %u  %lu\n",prt->xmt.Ul_i.Xl_ui,sizeof(prt->xmt.Ul_i));
-    fprintf(stderr,"xmt %u  %lu\n",prt->xmt.Ul_f.Xl_f,sizeof(prt->xmt.Ul_f));
+    fprintf(stderr,"xmt %u  %lu\n",
+            prt->xmt.Ul_i.Xl_ui,
+            sizeof(prt->xmt.Ul_i));
+    fprintf(stderr,"xmt %u  %lu\n",
+            prt->xmt.Ul_f.Xl_f,
+            sizeof(prt->xmt.Ul_f));
 
     time_t seconds;
     char buffer[20];
 
     NTP_TO_UNIX(prt->ref.Ul_i.Xl_ui, seconds);
     strftime(buffer,30,"%m-%d-%Y  %T",localtime(&seconds));
-    fprintf(stderr,"\nref: %s.%u\n",buffer,prt->ref.Ul_f.Xl_f);
+    fprintf(stderr,"\nref: %s.%u\n",
+            buffer,prt->ref.Ul_f.Xl_f);
 
 
     NTP_TO_UNIX(prt->org.Ul_i.Xl_ui, seconds);
     strftime(buffer,30,"%m-%d-%Y  %T",localtime(&seconds));
-    fprintf(stderr,"org: %s.%u\n",buffer,prt->org.Ul_f.Xl_f);
+    fprintf(stderr,"org: %s.%u\n",
+            buffer,prt->org.Ul_f.Xl_f);
 
     NTP_TO_UNIX(prt->rec.Ul_i.Xl_ui, seconds);
     strftime(buffer,30,"%m-%d-%Y  %T",localtime(&seconds));
-    fprintf(stderr,"rec: %s.%u\n",buffer,prt->rec.Ul_f.Xl_f);
+    fprintf(stderr,"rec: %s.%u\n",
+            buffer,prt->rec.Ul_f.Xl_f);
 
     NTP_TO_UNIX(prt->xmt.Ul_i.Xl_ui, seconds);
     strftime(buffer,30,"%m-%d-%Y  %T",localtime(&seconds));
-    fprintf(stderr,"xmt: %s.%u\n",buffer,prt->xmt.Ul_f.Xl_f);
+    fprintf(stderr,"xmt: %s.%u\n",
+            buffer,prt->xmt.Ul_f.Xl_f);
 
     fprintf(stderr,"*************   2nd STOP  *******************\n");
 
@@ -144,46 +210,73 @@ void send_ntp_packet(int sockfd, struct sockaddr *pcliaddr,
     n = recvfrom(sockfd, msg, len, 0, NULL, NULL);
 
     fprintf(stderr,"\n\n*************   3nd START  *******************\n");
-    fprintf(stderr,"li_vn_mode %Xh  size %lu\n",msg->li_vn_mode,sizeof(msg->li_vn_mode) );
-    fprintf(stderr,"stratum %d size %lu\n",msg->stratum,sizeof(msg->stratum));
-    fprintf(stderr,"ppoll %d size %lu\n",msg->ppoll,sizeof(msg->ppoll));
-    fprintf(stderr,"precision %d  size %lu\n",msg->precision,sizeof(msg->precision));
-    fprintf(stderr,"rootdelay %Xh size %lu\n",ntohl(msg->rootdelay),sizeof(msg->rootdelay));
-    fprintf(stderr,"rootdispersion %d %lu\n",ntohl(msg->rootdispersion),sizeof(msg->rootdispersion));
-    fprintf(stderr,"refid %d size %lu\n",msg->refid,sizeof(msg->refid));
+    fprintf(stderr,"li_vn_mode %Xh  size %lu\n",
+            msg->li_vn_mode,sizeof(msg->li_vn_mode) );
+    fprintf(stderr,"stratum %d size %lu\n",
+            msg->stratum,sizeof(msg->stratum));
+    fprintf(stderr,"ppoll %d size %lu\n",
+            msg->ppoll,sizeof(msg->ppoll));
+    fprintf(stderr,"precision %d  size %lu\n",
+            msg->precision,sizeof(msg->precision));
+    fprintf(stderr,"rootdelay %Xh size %lu\n",
+            ntohl(msg->rootdelay),sizeof(msg->rootdelay));
+    fprintf(stderr,"rootdispersion %d %lu\n",
+            ntohl(msg->rootdispersion),sizeof(msg->rootdispersion));
+    fprintf(stderr,"refid %d size %lu\n",
+            msg->refid,sizeof(msg->refid));
 
     NTOHL_FP(&msg->ref, &prt->ref);
     NTOHL_FP(&msg->org, &prt->org);
     NTOHL_FP(&msg->rec, &prt->rec);
     NTOHL_FP(&msg->xmt, &prt->xmt);
 
-    fprintf(stderr,"ref %u  %lu\n",prt->ref.Ul_i.Xl_ui,sizeof(msg->ref.Ul_i));
-    fprintf(stderr,"ref %u  %lu\n",prt->ref.Ul_f.Xl_f,sizeof(msg->ref.Ul_f));
-    fprintf(stderr,"org %u  %lu\n",prt->org.Ul_i.Xl_ui,sizeof(prt->org.Ul_i));
-    fprintf(stderr,"org %u  %lu\n",prt->org.Ul_f.Xl_f,sizeof(prt->org.Ul_f));
+    fprintf(stderr,"ref %u  %lu\n",
+            prt->ref.Ul_i.Xl_ui,
+            sizeof(msg->ref.Ul_i));
+    fprintf(stderr,"ref %u  %lu\n",
+            prt->ref.Ul_f.Xl_f,
+            sizeof(msg->ref.Ul_f));
+    fprintf(stderr,"org %u  %lu\n",
+            prt->org.Ul_i.Xl_ui,
+            sizeof(prt->org.Ul_i));
+    fprintf(stderr,"org %u  %lu\n",
+            prt->org.Ul_f.Xl_f,
+            sizeof(prt->org.Ul_f));
 
-    fprintf(stderr,"rec %u  %lu\n",prt->rec.Ul_i.Xl_ui,sizeof(prt->rec.Ul_i));
-    fprintf(stderr,"rec %u  %lu\n",prt->rec.Ul_f.Xl_f,sizeof(prt->rec.Ul_f));
+    fprintf(stderr,"rec %u  %lu\n",
+            prt->rec.Ul_i.Xl_ui,
+            sizeof(prt->rec.Ul_i));
+    fprintf(stderr,"rec %u  %lu\n",
+            prt->rec.Ul_f.Xl_f,
+            sizeof(prt->rec.Ul_f));
 
-    fprintf(stderr,"xmt %u  %lu\n",prt->xmt.Ul_i.Xl_ui,sizeof(prt->xmt.Ul_i));
-    fprintf(stderr,"xmt %u  %lu\n",prt->xmt.Ul_f.Xl_f,sizeof(prt->xmt.Ul_f));
+    fprintf(stderr,"xmt %u  %lu\n",
+            prt->xmt.Ul_i.Xl_ui,
+            sizeof(prt->xmt.Ul_i));
+    fprintf(stderr,"xmt %u  %lu\n",
+            prt->xmt.Ul_f.Xl_f,
+            sizeof(prt->xmt.Ul_f));
 
     NTP_TO_UNIX(prt->ref.Ul_i.Xl_ui, seconds);
     strftime(buffer,30,"%m-%d-%Y  %T",localtime(&seconds));
-    fprintf(stderr,"\nref: %s.%u\n",buffer,prt->ref.Ul_f.Xl_f);
+    fprintf(stderr,"\nref: %s.%u\n",
+            buffer,prt->ref.Ul_f.Xl_f);
 
 
     NTP_TO_UNIX(prt->org.Ul_i.Xl_ui, seconds);
     strftime(buffer,30,"%m-%d-%Y  %T",localtime(&seconds));
-    fprintf(stderr,"org: %s.%u\n",buffer,prt->org.Ul_f.Xl_f);
+    fprintf(stderr,"org: %s.%u\n",
+            buffer,prt->org.Ul_f.Xl_f);
 
     NTP_TO_UNIX(prt->rec.Ul_i.Xl_ui, seconds);
     strftime(buffer,30,"%m-%d-%Y  %T",localtime(&seconds));
-    fprintf(stderr,"rec: %s.%u\n",buffer,prt->rec.Ul_f.Xl_f);
+    fprintf(stderr,"rec: %s.%u\n",
+            buffer,prt->rec.Ul_f.Xl_f);
 
     NTP_TO_UNIX(prt->xmt.Ul_i.Xl_ui, seconds);
     strftime(buffer,30,"%m-%d-%Y  %T",localtime(&seconds));
-    fprintf(stderr,"xmt: %s.%u\n",buffer,prt->xmt.Ul_f.Xl_f);
+    fprintf(stderr,"xmt: %s.%u\n",
+            buffer,prt->xmt.Ul_f.Xl_f);
 
     fprintf(stderr,"*************   3nd STOP  *******************\n");
     free(msg);
